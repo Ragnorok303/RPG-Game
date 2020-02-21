@@ -1,0 +1,85 @@
+body {
+	background: url('') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.jumbotron {
+    padding: 6px 7px;
+    margin: 12px 0px 12px 0px;
+    opacity: 8px;
+}
+
+.jumbotron h1 {
+	font-size: 48px;
+    color: blue;
+}
+
+.jumbotron h2 {
+	font-size: 24px;
+    color: blue;
+}
+
+.character-image {
+	display: inline-block;
+  	height: 145px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px 2px 0px 2px;
+	background-color: white;
+	border: solid;
+	border-color: green;
+}
+
+.character-image p {
+	text-align: center;
+	margin: 0px 2px 0px 2px;
+}
+
+#chosen-character {
+	height: 190px;
+}
+
+#chosen-character h2 {
+	font-size: 24px;
+    color: red;
+}
+
+.chosen-character {
+	border-color: purple;
+	background-color: yellow;
+}
+
+#enemies-available h2 {
+	font-size: 24px;
+    color: purple;
+}
+
+.enemy-character {
+	border-color: green;
+	background-color: red;
+	margin: 0px 2px 0px 2px;
+}
+
+#fight-section h2 {
+	font-size: 24px;
+    color: red;
+}
+
+#defender-section {
+	height: 210px;
+}
+
+#defender-section h2 {
+	font-size: 24px;
+    color: red;
+}
+
+.defender-character {
+	border-color: blue;
+	background-color: yellow;
+}
+
+#game-message {
+	font-size: 18px;
+	font-weight: bold;
+    color: 	yellow;
+}
