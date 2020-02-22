@@ -6,17 +6,22 @@ body {
 .jumbotron {
     padding: 6px 7px;
     margin: 12px 0px 12px 0px;
-    opacity: 8px;
+	opacity: 8px;
+	background: none;
 }
 
 .jumbotron h1 {
 	font-size: 48px;
-    color: blue;
+	font-family: "Butcherman";
+	color: rgb(49, 1, 61);
+	-webkit-text-stroke: 1px rgb(166, 255, 0);
 }
 
 .jumbotron h2 {
-	font-size: 24px;
-    color: blue;
+	font-size: 35px;
+	font-family: "Jolly Lodger";
+	color: rgb(49, 1, 61);
+	-webkit-text-stroke: 1px rgb(166, 255, 0);
 }
 
 .character-image {
@@ -26,12 +31,15 @@ body {
 	margin: 0px 2px 0px 2px;
 	background-color: white;
 	border: solid;
-	border-color: green;
+	border-color:  rgb(49, 1, 61);
 }
 
 .character-image p {
 	text-align: center;
 	margin: 0px 2px 0px 2px;
+	font-size: 15px;
+	font-family: "Lacquer";
+	color: rgb(49, 1, 61);
 }
 
 #chosen-character {
@@ -39,29 +47,35 @@ body {
 }
 
 #chosen-character h2 {
-	font-size: 24px;
-    color: red;
+	font-size: 35px;
+	font-family: "Jolly Lodger";
+	color: rgb(166, 255, 0);
+	-webkit-text-stroke: 1px rgb(49, 1, 61);
 }
 
 .chosen-character {
-	border-color: purple;
-	background-color: yellow;
+	border-color: rgb(0, 225, 255);
+	background-color:rgb(166, 255, 0);
 }
 
 #enemies-available h2 {
-	font-size: 24px;
-    color: red;
+	font-size: 35px;
+	font-family: "Jolly Lodger";
+	color: rgb(166, 255, 0);
+	-webkit-text-stroke: 1px rgb(49, 1, 61);
 }
 
 .enemy-character {
-	border-color: green;
-	background-color: red;
+	border-color: rgb(49, 1, 61);
+	background-color: rgb(0, 225, 255);
 	margin: 0px 2px 0px 2px;
 }
 
 #fight-section h2 {
-	font-size: 24px;
-    color: red;
+	font-size: 35px;
+	font-family: "Jolly Lodger";
+	color: rgb(166, 255, 0);
+	-webkit-text-stroke: 1px rgb(49, 1, 61);
 }
 
 #defender-section {
@@ -69,17 +83,21 @@ body {
 }
 
 #defender-section h2 {
-	font-size: 24px;
-    color: red;
+	font-size: 35px;
+	font-family: "Jolly Lodger";
+	color: rgb(166, 255, 0);
+	-webkit-text-stroke: 1px rgb(49, 1, 61);
 }
 
 .defender-character {
-	border-color: blue;
-	background-color: yellow;
+	border-color: rgb(0, 225, 255);
+	background-color:rgb(166, 255, 0);
 }
 
 #game-message {
 	font-size: 18px;
+	font-family: "Lacquer";
 	font-weight: bold;
-    color: 	yellow;
+	color: 	rgb(255, 0, 0);
+	
 }
