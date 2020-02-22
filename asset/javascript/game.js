@@ -95,5 +95,67 @@ $(document).ready(function () {
             }
         }
     });
+    $("mothra-character").on("click", function() {
+        console.log("Mothra is selected");
+        if (characterSelected == false) {
+            $("#game-message").empty();
+            initializeCharacter(mothra);
+            characterSelected = true;
+            $("#mothra-character").removeClass("available-character").addClass("chosen-character");
+            $("#chosen-character").append(this);
+            moveToEnemies();
+        }
 
+        else if ((characterSelected == true) && (defenderSelected == false)) {
+            if ($("#mothra-character").hasClass("enemy-character")) {
+                $("#game-message").empty();
+                initializeDefender(mothra);
+                defenderSelected = true;
+                $("#mothra-character").removeClass("enemy-character").addClass("defender-character");
+                $("#defender-section").append(this);
+            }
+        }
+    });
+    $("king-kong-character").on("click", function() {
+        console.log("King Kong is selected");
+        if (characterSelected == false) {
+            $("#game-message").empty();
+            initializeCharacter(kingkong);
+            characterSelected = true;
+            $("#king-kong-character").removeClass("available-character").addClass("chosen-character");
+            $("#chosen-character").append(this);
+            moveToEnemies();
+        }
+
+        else if ((characterSelected == true) && (defenderSelected == false)) {
+            if ($("#king-kong-character").hasClass("enemy-character")) {
+                $("#game-message").empty();
+                initializeDefender(kingkong);
+                defenderSelected = true;
+                $("#king-kong-character").removeClass("enemy-character").addClass("defender-character");
+                $("#defender-section").append(this);
+            }
+        }
+    });
+    $("ghidorah-character").on("click", function() {
+        console.log("Ghidorah is selected");
+        if (characterSelected == false) {
+            $("#game-message").empty();
+            initializeCharacter(ghidorah);
+            characterSelected = true;
+            $("#ghidorah-character").removeClass("available-character").addClass("chosen-character");
+            $("#chosen-character").append(this);
+            moveToEnemies();
+        }
+
+        else if ((characterSelected == true) && (defenderSelected == false)) {
+            if ($("#ghidorah-character").hasClass("enemy-character")) {
+                $("#game-message").empty();
+                initializeDefender(ghidorah);
+                defenderSelected = true;
+                $("#ghidorah-character").removeClass("enemy-character").addClass("defender-character");
+                $("#defender-section").append(this);
+            }
+        }
+    });
 });
