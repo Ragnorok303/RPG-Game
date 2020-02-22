@@ -95,7 +95,7 @@ $(document).ready(function () {
             }
         }
     });
-    $("mothra-character").on("click", function() {
+    $("#mothra-character").on("click", function () {
         console.log("Mothra is selected");
         if (characterSelected == false) {
             $("#game-message").empty();
@@ -116,7 +116,7 @@ $(document).ready(function () {
             }
         }
     });
-    $("king-kong-character").on("click", function() {
+    $("#king-kong-character").on("click", function () {
         console.log("King Kong is selected");
         if (characterSelected == false) {
             $("#game-message").empty();
@@ -137,7 +137,7 @@ $(document).ready(function () {
             }
         }
     });
-    $("ghidorah-character").on("click", function() {
+    $("#ghidorah-character").on("click", function () {
         console.log("Ghidorah is selected");
         if (characterSelected == false) {
             $("#game-message").empty();
@@ -158,4 +158,52 @@ $(document).ready(function () {
             }
         }
     });
+});
+
+$("#attack").on("click", function () {
+    console.log("Attack selected");
+
+    console.log("character = " + JSON.stringify(character));
+    console.log("defender = " + JSON.stringify(defender));
+    if (characterSelected && defenderSelected && !gameOver) {
+        defender.health = defender.health - character.attack;
+        $(".defender-character").children(".health").html(defender.health);
+        $("#game-message").html("<p>You attacked " + defender.name + " for " + character.attack + " damage.<p>");
+        character.attack = character.attack + character.baseAttack;
+        if (defender.health > 0) {
+            character.health = character.health - defender.baseAttack;
+            $(".chosen-character").children(".health").html(character.health);
+            if (character.health > 0) {
+                $("#game-message").append("<p>" + defender.name + " attacked you back for " + defender.baseAttack + " damage.</p>");
+            } else {
+                gameOver = true;
+                $("#game-message").html("<p>You were defeated...</p><p>Play again?</p>");
+                $("#restart").show();
+            }
+        }
+        else {
+            enemiesDefeated++;
+            defenderSelected = false;
+            $("#game-message").html("<p>You have defeated " + defender.name + ". Choose another enemy.</p>");
+            $(".defender-character").hide();
+            if (enemiesDefeated === 3) {
+                gameOver = true;
+                $("#game-message").html("<p>You have won the game!!!</p><p>Play again?</p>");
+                $("#restart").show();
+            }
+        }
+    } else if (!characterSelected && !gameOver) {
+        $("#game-message").html("<p>You must first select your game character.</p>");
+    } else if (!defenderSelected && !gameOver) {
+        $("#game-message").html("<p>You must choose an enemy to fight.</p>");
+    }
+
+    console.log("character = " + JSON.stringify(character));
+    console.log("defender = " + JSON.stringify(defender));
+});
+
+$("#restart").on("click", function () {
+    console.log("Restart selected");
+
+    resetGame();
 });
