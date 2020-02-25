@@ -1,3 +1,4 @@
+$(document).ready(function () {
 var characterSelected = false;
 var defenderSelected = false;
 var character = {};
@@ -69,11 +70,18 @@ function resetGame() {
     character = {};
     defender = {};
 }
+var godzillamp3 = document.getElementById("Godzilla");
+var mothramp3 = document.getElementById("Mothra");
+var kingKongmp3 = document.getElementById("King-Kong");
+var ghidorahmp3 = document.getElementById("Ghidorah");
 
-$(document).ready(function () {
+function playAudio(x) {
+  x.play();
+  console.log("im playing");
+}
 
     $("#restart").hide();
-
+   
     $("#godzilla-character").on("click", function () {
         console.log("Godzilla is selected");
         if (characterSelected == false) {
@@ -83,6 +91,7 @@ $(document).ready(function () {
             $("#godzilla-character").removeClass("available-character").addClass("chosen-character");
             $("#chosen-character").append(this);
             moveToEnemies();
+            playAudio(godzillamp3);
         }
 
         else if ((characterSelected == true) && (defenderSelected == false)) {
@@ -92,6 +101,7 @@ $(document).ready(function () {
                 defenderSelected = true;
                 $("#godzilla-character").removeClass("enemy-character").addClass("defender-character");
                 $("#defender-section").append(this);
+                playAudio(godzillamp3);
             }
         }
     });
@@ -104,6 +114,7 @@ $(document).ready(function () {
             $("#mothra-character").removeClass("available-character").addClass("chosen-character");
             $("#chosen-character").append(this);
             moveToEnemies();
+            playAudio(mothramp3);
         }
 
         else if ((characterSelected == true) && (defenderSelected == false)) {
@@ -113,6 +124,7 @@ $(document).ready(function () {
                 defenderSelected = true;
                 $("#mothra-character").removeClass("enemy-character").addClass("defender-character");
                 $("#defender-section").append(this);
+                playAudio(mothramp3);
             }
         }
     });
@@ -125,6 +137,7 @@ $(document).ready(function () {
             $("#king-kong-character").removeClass("available-character").addClass("chosen-character");
             $("#chosen-character").append(this);
             moveToEnemies();
+            playAudio(kingKongmp3);
         }
 
         else if ((characterSelected == true) && (defenderSelected == false)) {
@@ -134,6 +147,7 @@ $(document).ready(function () {
                 defenderSelected = true;
                 $("#king-kong-character").removeClass("enemy-character").addClass("defender-character");
                 $("#defender-section").append(this);
+                playAudio(kingKongmp3);
             }
         }
     });
@@ -146,6 +160,7 @@ $(document).ready(function () {
             $("#ghidorah-character").removeClass("available-character").addClass("chosen-character");
             $("#chosen-character").append(this);
             moveToEnemies();
+            playAudio(ghidorahmp3);
         }
 
         else if ((characterSelected == true) && (defenderSelected == false)) {
@@ -155,6 +170,7 @@ $(document).ready(function () {
                 defenderSelected = true;
                 $("#ghidorah-character").removeClass("enemy-character").addClass("defender-character");
                 $("#defender-section").append(this);
+                playAudio(ghidorahmp3);
             }
         }
     });
